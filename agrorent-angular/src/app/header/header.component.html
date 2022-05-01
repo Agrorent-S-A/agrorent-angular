@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <a href="/">
+    <img src="../../assets/LogoAgrorent.svg" alt="logo" height="40px" width="auto">
+  </a>
+  <a routerLink="/rent">
+    <span>Alquilar</span>
+  </a>
+  <a [routerLink]="['/advertise']">
+    <span>Anuncia tu invernadero</span>
+  </a>
+  <a href="/loggin">
+    <span>iniciar sesión</span>
+  </a>
+  <span class="example-spacer"></span>
+  <a href="/us">
+    <span>Nosotros</span>
+  </a>
+</mat-toolbar>
+<router-outlet></router-outlet>
