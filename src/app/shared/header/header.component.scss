@@ -1,0 +1,29 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+span {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+a {
+    text-decoration: none;
+    color: rgb(66, 66, 66);
+}
+a:hover {
+    color: #00855d;
+    font-weight: 600;
+    
+}
+
+img {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+* {
+    background-color: white;
+}
+mat-toolbar{
+    position: fixed;
+    display: flex;
+    margin-left: -8px;
+}

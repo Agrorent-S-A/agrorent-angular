@@ -7,14 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
 import { RentComponent } from './rent/rent.component';
 import { AdvertiseComponent } from './advertise/advertise.component';
 import { LogginComponent } from './loggin/loggin.component';
 import { UsComponent } from './us/us.component';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from "@angular/flex-layout";
-
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +25,19 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     RentComponent,
     AdvertiseComponent,
     LogginComponent,
-    UsComponent
+    UsComponent,
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatIconModule, MatInputModule,FlexLayoutModule
+    MatIconModule,
+    MatInputModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

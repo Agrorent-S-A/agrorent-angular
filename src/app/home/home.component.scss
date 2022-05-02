@@ -1,21 +1,36 @@
 .container {
-    
     color: white;
-    position: fixed;
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     text-align: center;
     margin-left: -8px;
 }
-mat-form-field{
+mat-form-field {
     width: 500px;
     margin: auto;
 }
-.compromety{
-    padding-left: 10%;
-    padding-right: 10%;
+.compromety {
+    padding: 80px;
 }
-.first-content{
-    padding-top: 40px;
+.first-content {
+    padding-top: 80px;
     padding-bottom: 40px;
     background-color: #00855d;
+}
+.offer {
+    padding: 80px;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    color: black;
+}
+img {
+    border-radius: 25px;
+}
+
+.space-image {
+    background-image: url("../../assets/home/background-image.jpeg");
+    height: 150px;
+    width: 100%;
+    background-attachment: fixed;
+    overflow: scroll;
 }
