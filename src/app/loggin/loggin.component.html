@@ -8,21 +8,24 @@
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input name="email" matInput autocomplete="">
+                    <input name="email" matInput [(ngModel)]="usuario.email">
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input name="email" matInput autocomplete="">
+                    <input type="password" name="password" matInput [(ngModel)]="usuario.password">
                 </mat-form-field>
             </p>
-            <button class="send" mat-flat-button color="accent">Enviar</button>
-            <button class="google" mat-flat-button color="accent"> <img src="../../assets/google-logo.svg" height="25px"
-                    alt=""> Inicia sesión con Google</button>
+            <button class="send" mat-flat-button color="accent" (click)="login()">Enviar</button>
+            <button class="google" mat-flat-button color="accent" (click)="loginWithGoogle()"> <img
+                    src="../../assets/google-logo.svg" height="25px" alt=""> Inicia sesión con Google</button>
+
+            <!-- en el componente logout -->
+            <button class="send" mat-flat-button color="accent" (click)="getUserLogged()">Perfil</button>
+            <button class="send" mat-flat-button color="accent" (click)="logOut()">Cerrar Sesión</button>
         </div>
         <p><a href="/register">Registrate</a> si aún no lo has hecho</p>
-
 
     </div>
 </div>

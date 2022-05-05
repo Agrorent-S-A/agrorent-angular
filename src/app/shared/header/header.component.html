@@ -11,9 +11,18 @@
   <a href="/loggin">
     <span>iniciar sesión</span>
   </a>
-  <span class="example-spacer"></span>
   <a href="/us">
     <span>Nosotros</span>
   </a>
+  <span class="example-spacer"></span>
+  <a href="/perfil" *ngIf="userLogged|async as user" class="profile-email">
+    <span>{{user.email}}</span>
+  </a>
+  <a href="/perfil" *ngIf="userLogged|async as user">
+
+    <img *ngIf="user.photoURL" class="profile-photo" src="{{user.photoURL}}" alt="" srcset="" height="30px"
+      width="30px">
+  </a>
+
 </mat-toolbar>
 <router-outlet></router-outlet>

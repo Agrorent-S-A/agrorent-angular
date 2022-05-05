@@ -8,28 +8,28 @@
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Nombre y Apellido</mat-label>
-                    <input name="email" matInput autocomplete="">
+                    <input name="name"type="text" matInput autocomplete="" [ngModel]="usuario.name">
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
-                    <input name="email" matInput autocomplete="">
+                    <input name="email"type="mail" matInput autocomplete="" [ngModel]="usuario.email">
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Contraseña</mat-label>
-                    <input name="email" matInput autocomplete="">
+                    <input name="password"type="password" matInput autocomplete="" [ngModel]="usuario.email">
                 </mat-form-field>
             </p>
             <p>
                 <mat-form-field appearance="outline">
                     <mat-label>Repita la contraseña</mat-label>
-                    <input name="email" matInput autocomplete="">
+                    <input name="password" type="password" matInput autocomplete="">
                 </mat-form-field>
             </p>
-            <button class="send" mat-flat-button color="accent">Enviar</button>
+            <button class="send" mat-flat-button color="accent" (click)="register()">Enviar</button>
             <button class="google" mat-flat-button color="accent"> <img src="../../assets/google-logo.svg" height="25px"
                     alt=""> Inicia sesión con Google</button>
         </div>

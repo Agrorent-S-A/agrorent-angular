@@ -17,6 +17,14 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { LogoutComponent } from './logout/logout.component';
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +35,8 @@ import { RegisterComponent } from './register/register.component';
     LogginComponent,
     UsComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +46,9 @@ import { RegisterComponent } from './register/register.component';
     MatIconModule,
     MatInputModule,
     FlexLayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
