@@ -8,4 +8,6 @@ trabajamos sobre dev y se hacen Pull Request, cada vez que alguien haga algo gra
 
 # nodos utilizados 
 
-firebase, @firebase/auth, @angular/fire
+## ALVARO: 
+
+flexLayout, firebase, @firebase/auth, @angular/fire
