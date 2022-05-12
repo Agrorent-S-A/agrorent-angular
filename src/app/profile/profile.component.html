@@ -1,0 +1,8 @@
+<div class="container" fxLayout="column" fxLayoutAlign="space-between center" *ngIf="userLogged|async as user">
+
+    <img src="{{user.photoURL}}" alt="" srcset="" class="image">
+    <h1>{{user.email}}</h1>
+
+    <button mat-flat-button color="primary" (click)="logOut()">Cerrar Sesion</button>
+
+</div>

@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { LogoutComponent } from './logout/logout.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -36,7 +37,8 @@ import { LogoutComponent } from './logout/logout.component';
     UsComponent,
     FooterComponent,
     RegisterComponent,
-    LogoutComponent
+    LogoutComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
