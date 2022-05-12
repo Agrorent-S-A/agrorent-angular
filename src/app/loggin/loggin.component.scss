@@ -1,6 +1,6 @@
 .container {
     display: block;
-    max-height: 100%;
+    
 }
 .image {
     margin-left: -35px;
@@ -8,11 +8,10 @@
     zoom: 25%;
 }
 .loggin {
-    display: inline;
-    height: 500%;
+    max-width: 100%;
     background-color: #00855d;
     text-align: center;
-    padding: 8%;
+    padding: 3%;
     color: rgb(255, 255, 255);
 }
 mat-label {
