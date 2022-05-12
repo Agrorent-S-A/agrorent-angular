@@ -22,8 +22,8 @@
                     src="../../assets/google-logo.svg" height="25px" alt=""> Inicia sesión con Google</button>
 
             <!-- en el componente logout -->
-            <button class="send" mat-flat-button color="accent" (click)="getUserLogged()">Perfil</button>
-            <button class="send" mat-flat-button color="accent" (click)="logOut()">Cerrar Sesión</button>
+            <button *ngIf="userLogged|async as user" class="send" mat-flat-button color="accent"routerLink="/perfil" >Perfil</button>
+            <button *ngIf="userLogged|async as user" class="send" mat-flat-button color="accent" (click)="logOut()">Cerrar Sesión</button>
         </div>
         <p><a href="/register">Registrate</a> si aún no lo has hecho</p>
 
