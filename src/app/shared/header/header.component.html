@@ -5,28 +5,34 @@
     <a href="/">
       <img src="../../assets/LogoAgrorent.svg" alt="logo" height="40px" width="auto">
     </a>
-    <a routerLink="/rent">
+    <a routerLink="/rent" >
       <span>Alquilar</span>
     </a>
     <!-- <a [routerLink]="['/advertise']">
     <span>Anuncia tu invernadero</span>
   </a> -->
-    <a href="/loggin">
-      <span>iniciar sesión</span>
+    <a href="/loggin" *ngIf="ngOnChanges()== false">
+      <span>Iniciar sesion</span>
     </a>
+    
+    <!-- <a href="/loggin">
+      <span></span>
+    </a> -->
     <!-- <a href="/us">
     <span>Nosotros</span>
   </a> -->
     <span class="example-spacer"></span>
-    <a href="/perfil" *ngIf="userLogged|async as user" class="profile-email">
-      <span>{{user.email}}</span>
+    <a href="/perfil" *ngIf="userLogged|async as user" class="profile-email" >
+      <span >{{user.email}}</span>
     </a>
     <a href="/perfil" *ngIf="userLogged|async as user">
-
-      <img *ngIf="user.photoURL" class="profile-photo" src="{{user.photoURL}}" alt="" srcset="" height="30px"
+      <div #logged>
+        <img *ngIf="user.photoURL" class="profile-photo" src="{{user.photoURL}}" alt="" srcset="" height="30px"
         width="30px">
+      <img *ngIf="!user.photoURL" class="profile-photo" src="../../../assets/default_profile_picture_117087.jpeg" alt="" srcset="" height="30px"
+        width="30px">
+      </div>
+      
     </a>
   </mat-toolbar-row>
 </mat-toolbar>
-
-
