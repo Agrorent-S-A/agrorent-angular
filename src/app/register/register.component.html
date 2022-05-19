@@ -2,36 +2,52 @@
     <div class="image" fxFlex="50">
 
     </div>
+
     <div class="loggin" fxFlex="50">
         <div class="content-loggin">
-            <h2>Registrate!</h2>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label>Nombre y Apellido</mat-label>
-                    <input name="name"type="text" matInput autocomplete="" [ngModel]="usuario.name">
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label>Email</mat-label>
-                    <input name="email"type="mail" matInput autocomplete="" [ngModel]="usuario.email">
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label>Contraseña</mat-label>
-                    <input name="password"type="password" matInput autocomplete="" [ngModel]="usuario.email">
-                </mat-form-field>
-            </p>
-            <p>
-                <mat-form-field appearance="outline">
-                    <mat-label>Repita la contraseña</mat-label>
-                    <input name="password" type="password" matInput autocomplete="">
-                </mat-form-field>
-            </p>
-            <button class="send" mat-flat-button color="accent" (click)="register()">Enviar</button>
-            <button class="google" mat-flat-button color="accent"> <img src="../../assets/google-logo.svg" height="25px"
-                    alt=""> Inicia sesión con Google</button>
+            <form action="" [formGroup]="form" autocomplete="off" >
+                <h2>Registrate!</h2>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nombre y Apellido</mat-label>
+                        <input name="name" type="text" matInput autocomplete="" formControlName="name" [ngModel]="usuario.name"  >
+                        <mat-error *ngIf="form.controls['name'].errors?.required">Este campo es obligatorio</mat-error>
+                        <mat-error *ngIf="form.controls['name'].hasError('pattern')">Solo se permiten letras</mat-error>
+                        <mat-error *ngIf="form.get('name')?.hasError('minlength')">Mínimo 10 carácteres</mat-error>
+                        <mat-error *ngIf="form.controls['name'].hasError('maxlength')">Máximo 20 carácteres</mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input name="email" type="mail" matInput autocomplete=""  formControlName="email" [ngModel]="usuario.email">
+                        <mat-error *ngIf="form.controls['email'].errors?.required">Este campo es obligatorio</mat-error>
+                        <mat-error *ngIf="form.controls['email'].errors?.pattern">Este campo debe ser un email</mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contraseña</mat-label>
+                        <input name="password" type="password" matInput formControlName="password" [ngModel]="usuario.email">
+                        <mat-error *ngIf="form.controls['password'].errors?.required">Este campo es obligatorio</mat-error>
+                        <mat-error *ngIf="form.controls['password'].errors?.pattern">mínimo una mayuscula minuscula y un numero</mat-error>
+                        <mat-error *ngIf="form.controls['password'].errors?.maxlength">Máximo 20 carácteres</mat-error>
+                        <mat-error *ngIf="form.controls['password'].errors?.minlength">Mínimo 10 carácteres</mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confimar contraseña</mat-label>
+                        <input name="password2" type="password" formControlName="password2" matInput autocomplete="">
+                        <mat-error *ngIf="form.controls['password2'].errors?.required">Este campo es obligatorio</mat-error>
+                    </mat-form-field>
+                </p>
+                <button class="send" mat-flat-button color="accent" name="send" (click)="register()" 
+                    >Enviar</button>
+                <button class="google" mat-flat-button color="accent"> <img src="../../assets/google-logo.svg"
+                        height="25px" alt=""> Inicia sesión con Google</button>
+            </form>
+
         </div>
 
     </div>

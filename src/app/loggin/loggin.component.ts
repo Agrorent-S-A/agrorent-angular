@@ -15,6 +15,12 @@ export class LogginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+  }
+  mostrar(foto: any) {
+
+    console.log("-------> "+foto)
+
   }
 
   constructor(private authService: AuthService) {
@@ -42,7 +48,7 @@ export class LogginComponent implements OnInit {
   getUserLogged() {
     this.authService.getUserLogged().subscribe(res => console.log(res?.email));
   }
-  
+
   logOut() {
     this.authService.logOut();
   }
