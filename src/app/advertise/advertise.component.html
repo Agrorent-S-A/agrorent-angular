@@ -1,1 +1,69 @@
-<h1>ANUNCIOS</h1>
+<form class="container">
+    <div class="content" fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="40px">
+        <h1>Anuncia tu invernadero</h1>
+        <div class="photo" fxLayout="column" fxLayoutGap="40px" fxLayoutAlign="center center">
+            <h3>FOTOGRAFÍA DEL ANUNCIO</h3>
+            <div class="image" fxLayoutAlign="end end">
+                <div class="edit">
+                    <button mat-raised-button class="edit">Editar</button>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+            <h3>Título del anuncio</h3>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label color="accent">Título</mat-label>
+                <input matInput type="text" autocomplete="off">
+            </mat-form-field>
+        </div>
+
+
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+            <h3>Descrición del anuncio</h3>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label color="accent">Una breve descripción</mat-label>
+                <textarea matInput autocomplete="off" style="height:100px;"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+            <h3>Precio</h3>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <input matInput type="number" autocomplete="off">
+                <span matSuffix>€</span>
+            </mat-form-field>
+        </div>
+
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+            <h3>Número de hectarias</h3>
+            <mat-slider thumbLabel color="#271289" tickInterval="0" step="0.50" min="0.50" max="100" aria-label="units">
+            </mat-slider>
+        </div>
+
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+            <h3>Tipo de Suelos</h3>
+            <mat-form-field appearance="outline" class="selects">
+                <mat-label>Elije un tipo de suelo</mat-label>
+                <mat-select>
+                    <mat-option value="1">Suelos arenosos.
+                    </mat-option>
+                    <mat-option value="2">Suelos calizos.
+                    </mat-option>
+                    <mat-option value="3">Tierra negra.
+                    </mat-option>
+                    <mat-option value="4">Suelos arcillosos.
+                    </mat-option>
+                    <mat-option value="5">Suelos pedregosos.
+                    </mat-option>
+                    <mat-option value="6">Suelos mixtos.
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button class="send">enviar</button>
+        </div>
+
+    </div>
+</form>

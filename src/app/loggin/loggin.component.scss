@@ -50,49 +50,19 @@ a:visited {
 }
 // modificar los inputs
 
-//input outline color
-::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: rgb(255, 255, 255) !important;
-
-    opacity: 1 !important;
-}
-
-//mat-input focused color
-::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: rgb(255, 255, 255) !important;
-}
-
-// mat-input error outline color
-::ng-deep
-    .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid
-    .mat-form-field-outline-thick {
-    color: red !important;
-    opacity: 0.8 !important;
-}
-
-// mat-input carent color
-::ng-deep .mat-input-element {
-    caret-color: red !important;
-}
-
-// mat-input error carent color
-::ng-deep .mat-form-field-invalid .mat-input-element,
-.mat-warn .mat-input-element {
-    caret-color: red !important;
-}
-
-// mat-label normal state style
-::ng-deep .mat-form-field-label {
-    color: rgba(255, 255, 255, 0.6) !important;
-    // color: $mainColor!important;
-}
-
-// mat-label focused style
-::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-    color: rgb(255, 255, 255) !important;
-}
-
-// mat-label error style
-::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: rgb(255, 255, 255) !important;
+::ng-deep {
+    .mat-form-field-label {
+        color: #00855d !important;
+    }
+    .mat-form-field-outline {
+        color: #00855d;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(175, 175, 175, 0.176) !important;
+    }
+    // mat-input focused color
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: #00855d !important;
+    }
 }
