@@ -3,7 +3,7 @@
 
     </div>
     <div class="loggin" fxFlex="60">
-        <div class="content-loggin">
+        <div class="content-loggin" >
             <h2>Inicia sesión</h2>
             <p>
                 <mat-form-field appearance="outline">
@@ -12,9 +12,9 @@
                 </mat-form-field>
             </p>
             <p>
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" autocomplete="off">
                     <mat-label>Password</mat-label>
-                    <input type="password" name="password" matInput [(ngModel)]="usuario.password">
+                    <input type="password" name="password" matInput [(ngModel)]="usuario.password" >
                 </mat-form-field>
             </p>
             <button class="send" mat-flat-button color="accent" (click)="login()">Enviar</button>

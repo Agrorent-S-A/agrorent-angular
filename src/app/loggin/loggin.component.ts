@@ -51,6 +51,7 @@ export class LogginComponent implements OnInit {
 
   logOut() {
     this.authService.logOut();
+    window.location.reload();
   }
   userLogged = this.authService.getUserLogged();
 

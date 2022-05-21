@@ -12,4 +12,16 @@ export class AdvertiseComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  formatLabel(value: number) {
+    if (value >= 1) {
+      return value + ' hectárea ';
+    }
+    if (value==0.5) {
+      
+      return 'media hectarea';
+    }
+
+    return value;
+  }
 }
