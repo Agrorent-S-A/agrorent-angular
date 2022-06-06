@@ -31,6 +31,7 @@ import { advertisements } from '../app/services/advertisements.service';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
+import { AdvertisementInfoComponent } from './advertisement-info/advertisement-info.component';
 
 
 
@@ -46,7 +47,8 @@ import { MatCardModule } from '@angular/material/card';
     FooterComponent,
     RegisterComponent,
     LogoutComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdvertisementInfoComponent
   ],
   imports: [
     BrowserModule,

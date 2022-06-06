@@ -17,5 +17,12 @@ export class AnunciosService {
   getEmpleados(): Observable<any> {
     return this.fireStore.collection('empleados', ref => ref.orderBy("fechaCreacion", "asc")).snapshotChanges();
   }
+  deleteAdv(id: string): Promise<any> {
+    return this.fireStore.collection("empleados").doc(id).delete();
+  }
+
+  infoAdv(id: string|null): Observable<any> {
+    return this.fireStore.collection("empleados").doc(''+id).snapshotChanges();
+  }
 
 }

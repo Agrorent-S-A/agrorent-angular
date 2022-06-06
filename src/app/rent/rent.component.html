@@ -1,8 +1,7 @@
-
 <div fxLayout="row wrap" class="container">
     <div *ngIf="anuncios.length <= 0" class="empty">
         <p>No hay anuncios en estos momentos, suba uno o espere.</p>
-        <img src="../../assets/rent/empty.gif" alt="" >
+        <img src="../../assets/rent/empty.gif" alt="">
     </div>
     <div *ngFor="let anuncio of anuncios">
 
@@ -18,7 +17,7 @@
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-button>Ver anuncio</button>
+                <button mat-button [routerLink]="['/advertisement-info/',anuncio.id]">Ver anuncio</button>
             </mat-card-actions>
         </mat-card>
 

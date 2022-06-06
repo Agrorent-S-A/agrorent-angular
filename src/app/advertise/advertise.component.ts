@@ -43,13 +43,19 @@ export class AdvertiseComponent implements OnInit {
     }
     console.log(empleado)
     this._AdvService.agregarEmpleado(empleado).then(() => {
-
-
       console.log('empleado registrado con exito')
       // this.router.navigate(['/list-empleados']);
     }).catch(error => {
       console.log(error);
     });
+  }
+
+  DeleteAdv(id: string) {
+    this._AdvService.deleteAdv(id).then(() => {
+      console.log("empleado elminado")
+    }).catch(error => {
+      console.log(error)
+    })
   }
 
   formatLabel(value: number) {

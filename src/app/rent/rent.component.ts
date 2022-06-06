@@ -13,7 +13,6 @@ export class RentComponent implements OnInit {
   ngOnInit(): void {
     this.getAnuncio();
   }
-
   getAnuncio(){
     this._advService.getEmpleados().subscribe(data => {
       this.anuncios = [];
@@ -21,9 +20,8 @@ export class RentComponent implements OnInit {
         this.anuncios.push({
           id: element.payload.doc.id,
           ...element.payload.doc.data()
-        })
+        });
       });
-
       console.log(this.anuncios)
     });
   }
