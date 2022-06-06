@@ -19,7 +19,7 @@ export class LogginComponent implements OnInit {
   }
   mostrar(foto: any) {
 
-    console.log("-------> "+foto)
+    // console.log("-------> "+foto)
 
   }
 
@@ -33,7 +33,7 @@ export class LogginComponent implements OnInit {
       console.log("usuario registrado ")
     });
 
-    console.log(this.usuario);
+    // console.log(this.usuario);
   }
 
   loginWithGoogle() {//Iniciar sesion con Google
@@ -46,7 +46,7 @@ export class LogginComponent implements OnInit {
   }
 
   getUserLogged() {
-    this.authService.getUserLogged().subscribe(res => console.log(res?.email));
+    this.authService.getUserLogged().subscribe(res => res?.email);
   }
 
   logOut() {

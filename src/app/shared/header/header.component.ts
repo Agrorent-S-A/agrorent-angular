@@ -17,10 +17,10 @@ export class HeaderComponent implements OnInit {
   
   ngOnChanges(): boolean {
     if (this.logged == undefined) {
-      console.log("false")
+      // console.log("false")
       return false;
     } else {
-      console.log("true")
+      // console.log("true")
       return true;
     }
   }

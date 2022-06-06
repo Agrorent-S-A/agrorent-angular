@@ -16,16 +16,21 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { RegisterComponent } from './register/register.component';
-import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSelectModule} from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSelectModule } from '@angular/material/select';
+
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { LogoutComponent } from './logout/logout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { advertisements } from '../app/services/advertisements.service';
+import { HttpClientModule } from '@angular/common/http';
 
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -55,11 +60,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormsModule,
     ReactiveFormsModule,
     MatSliderModule,
-    MatFormFieldModule ,// or SharedModule that exports MatFormFieldModule
+    MatFormFieldModule,// or SharedModule that exports MatFormFieldModule
     MatSelectModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    MatCardModule,
+    MatGridListModule
   ],
-  providers: [],
+  providers: [advertisements],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
