@@ -1,0 +1,37 @@
+.cards {
+    width: 300px;
+    height: 450px;
+    margin: 40px;
+}
+
+.container {
+    background-color: #00855d;
+    display: grid;
+    margin: auto;
+    
+}
+
+mat-card {
+    background-color: rgba(255, 249, 249, 0.716);
+    color: black;
+}
+
+.empty {
+    img{
+        border-radius: 25px;
+    }
+    margin: 0 auto ;
+    text-align: center;
+    padding-top:40px;
+    padding-bottom:40px;
+    color: rgb(255, 255, 255);
+}
+mat-card-actions{
+    button{
+        width: 100%;
+        color: white;
+        height: 80px;
+        background-color: rgb(64, 104, 126);
+    }
+    margin: 0 auto;
+}

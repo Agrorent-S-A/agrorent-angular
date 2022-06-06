@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-  
 
-  constructor(private authService: AuthService,private router:Router) { }
+
+  constructor(private authService: AuthService, private router: Router) { }
 
   userLogged = this.authService.getUserLogged();
   ngOnInit(): void {
-    console.log("USER --> " + this.authService.getUserLogged)
   }
+
   logOut() {
-    
-    this.router.navigate(['/']);
-    this.authService.logOut();
-    
+    this.authService.logOut();// deslogear
+    this.router.navigate(['/']);//redirigir a la home
   }
 
 }

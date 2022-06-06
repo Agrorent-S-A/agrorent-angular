@@ -1,4 +1,4 @@
-<form class="container">
+<form class="container" [formGroup]="form" (ngSubmit)="addAnuncio()">
     <div class="content" fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="40px">
         <h1>Anuncia tu invernadero</h1>
         <div class="photo" fxLayout="column" fxLayoutGap="40px" fxLayoutAlign="center center">
@@ -14,7 +14,7 @@
             <h3>Título del anuncio</h3>
             <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label color="accent">Título</mat-label>
-                <input matInput type="text" autocomplete="off">
+                <input matInput type="text" autocomplete="off" formControlName="title">
             </mat-form-field>
         </div>
 
@@ -23,7 +23,7 @@
             <h3>Descrición del anuncio</h3>
             <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label color="accent">Una breve descripción</mat-label>
-                <textarea matInput autocomplete="off" style="height:100px;"></textarea>
+                <textarea matInput autocomplete="off" style="height:100px;" formControlName="description"></textarea>
             </mat-form-field>
         </div>
 
@@ -62,7 +62,7 @@
             </mat-form-field>
         </div>
         <div>
-            <button mat-raised-button class="send">enviar</button>
+            <button mat-raised-button class="send" (click)="onSubmit()">enviar</button>
         </div>
 
     </div>
