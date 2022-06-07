@@ -19,7 +19,6 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
-
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -32,6 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { AdvertisementInfoComponent } from './advertisement-info/advertisement-info.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+
 
 
 
@@ -48,7 +49,8 @@ import { AdvertisementInfoComponent } from './advertisement-info/advertisement-i
     RegisterComponent,
     LogoutComponent,
     ProfileComponent,
-    AdvertisementInfoComponent
+    AdvertisementInfoComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,7 @@ import { AdvertisementInfoComponent } from './advertisement-info/advertisement-i
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [advertisements],
   bootstrap: [AppComponent]
