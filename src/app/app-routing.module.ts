@@ -6,6 +6,7 @@ import { AdvertiseComponent } from './advertise/advertise.component';
 import { LogginComponent } from './loggin/loggin.component';
 import { RentComponent } from './rent/rent.component';
 import { UsComponent } from './us/us.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdvertisementInfoComponent } from './advertisement-info/advertisement-info.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'loggin', component: LogginComponent },
   { path: 'rent', component: RentComponent },
   { path: 'us', component: UsComponent },
+  { path: 'nosotros', component: NosotrosComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'perfil', component: ProfileComponent },
   { path: 'advertisement-info/:id', component: AdvertisementInfoComponent }
