@@ -10,25 +10,28 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AdvertisementInfoComponent } from './advertisement-info/advertisement-info.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'advertise', component:AdvertiseComponent  },
+  { path: 'advertise', component: AdvertiseComponent },
   { path: 'loggin', component: LogginComponent },
   { path: 'rent', component: RentComponent },
   { path: 'us', component: UsComponent },
   { path: 'nosotros', component: NosotrosComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'logout', component: LogoutComponent },
   { path: 'perfil', component: ProfileComponent },
   { path: 'advertisement-info/:id', component: AdvertisementInfoComponent }
+
 ];
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  
+
 
 })
 export class AppRoutingModule { }

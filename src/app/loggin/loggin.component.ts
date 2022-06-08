@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 
@@ -23,7 +24,7 @@ export class LogginComponent implements OnInit {
 
   }
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService, private router: Router) {
 
   }
 
@@ -31,15 +32,18 @@ export class LogginComponent implements OnInit {
     const { email, password } = this.usuario;
     this.authService.login(email, password).then(res => {
       console.log("usuario registrado ")
+      
     });
-
-    // console.log(this.usuario);
   }
 
   loginWithGoogle() {//Iniciar sesion con Google
     const { email, password } = this.usuario;
     this.authService.loginGoogle(email, password).then(res => {
       console.log("usuario registrado ")
+      this.router.navigate(['/'])
+      .then(() => {
+        window.location.reload();
+      });
     });
 
     // console.log(this.usuario);

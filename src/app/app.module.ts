@@ -33,6 +33,10 @@ import { MatCardModule } from '@angular/material/card';
 import { AdvertisementInfoComponent } from './advertisement-info/advertisement-info.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 
+import { provideStorage, StorageModule } from '@angular/fire/storage';
+import { provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp } from 'firebase/app';
+import { getStorage } from 'firebase/storage';
 
 
 
@@ -68,8 +72,11 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     MatSelectModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    provideFirebaseApp(()=>initializeApp(environment.firebaseConfig)),
+    provideStorage(()=>getStorage()),
     MatCardModule,
     MatGridListModule,
+    StorageModule
   ],
   providers: [advertisements],
   bootstrap: [AppComponent]

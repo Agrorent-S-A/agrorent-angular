@@ -8,23 +8,16 @@
     <a routerLink="/rent" >
       <span>Alquilar</span>
     </a>
-    <a [routerLink]="['/advertise']">
-    <span>Anuncia tu invernadero</span>
+    <a [routerLink]="['/advertise']" *ngIf="ngOnChanges()">
+    <span >Anuncia tu invernadero</span>
   </a>
-    <a href="/loggin" *ngIf="ngOnChanges()== false">
-      <span>Iniciar sesion</span>
+    <a href="/loggin" *ngIf="!ngOnChanges()">
+      <span>Iniciar sesión</span>
     </a>
-
     <a href="/nosotros">
       <span>¿Quiénes somos?</span>
     </a>
     
-    <!-- <a href="/loggin">
-      <span></span>
-    </a> -->
-    <!-- <a href="/us">
-    <span>Nosotros</span>
-  </a> -->
     <span class="example-spacer"></span>
     <a href="/perfil" *ngIf="userLogged|async as user" class="profile-email" >
       <span >{{user.email}}</span>
@@ -36,7 +29,6 @@
       <img *ngIf="!user.photoURL" class="profile-photo" src="../../../assets/default_profile_picture_117087.jpeg" alt="" srcset="" height="30px"
         width="30px">
       </div>
-      
     </a>
   </mat-toolbar-row>
 </mat-toolbar>

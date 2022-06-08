@@ -1,14 +1,31 @@
-<div *ngFor="let item of anuncios" class="container">
+<div *ngFor="let item of anuncios" class="container" fxLayout="row" fxLayoutAlign="start start">
     <div class="image">
-        <img src="../../assets/rent/finca.jpeg" height="400px" width="400px" alt="">
+        <img src="../../assets/rent/{{randomIntFromInterval(1,5)}}.jpeg" width="700px" height="auto" alt="">
     </div>
+
     <div class="texts">
         <p class="title">
             {{item.title}}
         </p>
         <p class="description">
-            {{item.description}}
+            Descripción : {{item.description}}
         </p>
-        
+        <p class="price">
+            Precio : {{item.price}}
+        </p>
+        <p class="h2">
+            Hectareas cuadradas: {{item.h2}}
+        </p>
+
+        <div [ngSwitch]="item.soilType">
+
+            <p *ngSwitchCase="'1'">Tipo de suelo : Arenoso</p>
+            <p *ngSwitchCase="'2'">Tipo de suelo : Calizo</p>
+            <p *ngSwitchCase="'3'">Tipo de suelo : Tierra negra</p>
+            <p *ngSwitchCase="'4'">Tipo de suelo : Suelo arcilloso</p>
+            <p *ngSwitchCase="'5'">Tipo de suelo : Suelo mixto</p>
+        </div>
+
+
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -8,21 +9,23 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('logged') logged: ElementRef | undefined;
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,private router:Router) { }
 
   userLogged = this.authService.getUserLogged();
 
   ngOnInit(): void {
+    
   }
   
   ngOnChanges(): boolean {
     if (this.logged == undefined) {
-      // console.log("false")
+      
       return false;
     } else {
-      // console.log("true")
+      
       return true;
     }
+    
   }
 
 

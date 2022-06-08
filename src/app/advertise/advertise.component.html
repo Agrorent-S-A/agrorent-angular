@@ -5,11 +5,11 @@
             <h3>FOTOGRAFÍA DEL ANUNCIO</h3>
             <div class="image" fxLayoutAlign="end end">
                 <div class="edit">
-                    <button mat-raised-button class="edit">Editar</button>
+                    <label for="files" class="btn">Editar</label>
+                    <input mat-raised-button class="edit" type="file" (change)="uploadImage($event)" >
                 </div>
             </div>
         </div>
-
         <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
             <h3>Título del anuncio</h3>
             <mat-form-field class="example-full-width" appearance="outline">
@@ -17,8 +17,6 @@
                 <input matInput type="text" autocomplete="off" formControlName="title">
             </mat-form-field>
         </div>
-
-
         <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
             <h3>Descrición del anuncio</h3>
             <mat-form-field class="example-full-width" appearance="outline">
@@ -30,14 +28,15 @@
         <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
             <h3>Precio</h3>
             <mat-form-field class="example-full-width" appearance="outline">
-                <input matInput type="number" autocomplete="off">
+                <input matInput type="number" autocomplete="off" formControlName="price">
                 <span matSuffix>€</span>
             </mat-form-field>
         </div>
 
         <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
             <h3>Número de hectarias</h3>
-            <mat-slider thumbLabel color="#271289" tickInterval="0" step="0.50" min="0.50" max="100" aria-label="units">
+            <mat-slider thumbLabel color="#271289" tickInterval="0" step="0.50" min="0.50" max="100" aria-label="units"
+                formControlName="h2">
             </mat-slider>
         </div>
 
@@ -45,7 +44,7 @@
             <h3>Tipo de Suelos</h3>
             <mat-form-field appearance="outline" class="selects">
                 <mat-label>Elije un tipo de suelo</mat-label>
-                <mat-select>
+                <mat-select formControlName="soilType">
                     <mat-option value="1">Suelos arenosos.
                     </mat-option>
                     <mat-option value="2">Suelos calizos.
@@ -62,8 +61,11 @@
             </mat-form-field>
         </div>
         <div>
-            <button mat-raised-button class="send" (click)="onSubmit()">enviar</button>
+            <button mat-raised-button class="send">enviar</button>
         </div>
 
     </div>
 </form>
+<div *ngFor="let image of Auximages">
+    <img [src]="image">
+</div>

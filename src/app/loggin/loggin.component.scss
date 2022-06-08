@@ -1,11 +1,12 @@
 .container {
-    display: block;
+    display: flex;
     
 }
 .image {
     margin-left: -35px;
     background-image: url("../../assets/loggin/loggin.jpeg");
     zoom: 25%;
+    margin-bottom: -600px;
 }
 .loggin {
     max-width: 100%;

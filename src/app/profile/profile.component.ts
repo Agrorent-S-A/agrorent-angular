@@ -13,11 +13,15 @@ export class ProfileComponent implements OnInit {
 
   userLogged = this.authService.getUserLogged();
   ngOnInit(): void {
+
   }
 
   logOut() {
     this.authService.logOut();// deslogear
-    this.router.navigate(['/']);//redirigir a la home
+    this.router.navigate(['/'])
+      .then(() => {
+        window.location.reload();
+      });
   }
 
 }
